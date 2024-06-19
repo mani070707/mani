@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    margin: 0;
+    background-color: black;
+    color: white;
+    height: 200vh;
+   
+    overflow: hidden;
+
+}
+
+.container {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 20px;
+    z-index: 10000;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 2s ease-in-out;
+}
+.container.fade-in {
+    opacity: 1; /* Visible when the fade-in class is added */
+}
+.container .box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transform: rotate(-180deg);
+}
+
+
+.container .box h3 {
+    writing-mode: vertical-lr;
+    margin: 10px 0;
+    text-align: left;
+    position: relative;
+}
+
+.container .box h3 a {
+    color: white;
+    text-decoration: none;
+}
+
+.container .box h3 a:visited {
+    color: white;
+}
+
+.container {
+    text-align: center;
+}
+
+.box h3 {
+    margin: 10px 0;
+}
+
+.hover-box {
+    display: none;
+    width: 480px;
+    height: 340px;
+    background-color: white;
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    
+    margin-right: 50px;
+    
+    transform: translateY(-40%) rotate(-180deg);
+    
+    
+    
+}
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+option:first{
+    opacity: 0.2;
+}
+
+.hover-box.active {
+    display: block;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    background-color: transparent;
+    border: 0px solid;
+    border-bottom: 1px solid grey;
+    color: #CCC;
+    
+}
+
+.contact-form .phone-container {
+    display: flex;
+}
+
+.contact-form .phone-container select {
+    flex: 1;
+    margin-right: 5px;
+}
+
+.contact-form .phone-container input {
+    flex: 2;
+}
+
+.contact-form button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #444;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.box h3:hover .hover-box {
+    display: block;
+    opacity: 1;
+    cursor: pointer;
+}
