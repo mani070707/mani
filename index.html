@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+    <link rel="stylesheet" href="form.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.querySelector(".container").classList.add("fade-in");
+            }, 1000); // 10000 milliseconds = 10 seconds
+        });
+    </script>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box">
+            <h3><a href="https://web.whatsapp.com">WhatsApp</a></h3>
+            <h3><a href="tel:+1234567890">Call</a></h3>
+            <h3 class="contact-toggle">Contact us</h3>
+            <div class="hover-box">
+                <form action="#" method="post" class="contact-form">
+                    
+                    <input type="text"placeholder="Name" id="name" name="name" required>
+                    <input type="email" placeholder="E-mail" id="email" name="email" required>
+                    <div class="phone-container">
+                        <select id="country-code" name="country-code">
+                            <option value="+1">+1</option>
+                           
+                        </select>
+                        <input type="tel" placeholder="Phone" id="phone" name="phone" required>
+                    </div>
+                
+                    <select  id="project" name="project" >
+                    
+                        <option value="" disabled selected hidden>Choose your project</option>
+                        <option value="project1">Project 1</option>
+                        
+                        <option value="project2">Project 2</option>
+                        <!-- Add more projects as needed -->
+                    </select>
+                    
+                    
+                    <textarea id="message" placeholder="message" name="message" rows="4" required></textarea>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+ 
+    <script>
+        document.querySelector(".contact-toggle").addEventListener("click", function() {
+            document.querySelector(".hover-box").classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
